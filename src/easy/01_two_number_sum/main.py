@@ -68,7 +68,7 @@ def main():
     # print(worst_case(numbers, target_sum))
     # print(suboptimal(numbers, target_sum))
     # print(median(numbers, target_sum))
-    print(optimal(numbers, target_sum))
+    return optimal(numbers, target_sum)
 
 
 if __name__ == "__main__":
