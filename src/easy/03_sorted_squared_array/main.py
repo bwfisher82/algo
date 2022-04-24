@@ -1,20 +1,17 @@
-from random import randint
-
-
-def suboptimal(input):
-    return sorted([i**2 for i in input])
+def suboptimal(array):
+    return sorted([i ** 2 for i in array])
     # simple, but O(n log(n)) T, O(n) S
 
 
-def optimal(input):
+def optimal(array):
     head_index = 0
-    tail_index = len(input) - 1
-    result = [0] * len(input)
+    tail_index = len(array) - 1
+    result = [0] * len(array)
     result_index = tail_index
 
     while result_index >= 0:
-        head = abs(input[head_index])
-        tail = abs(input[tail_index])
+        head = abs(array[head_index])
+        tail = abs(array[tail_index])
         if head > tail:
             result[result_index] = head ** 2
             head_index += 1
@@ -32,36 +29,9 @@ def optimal(input):
     # because reasons, but for the purposes of this example, it is fine
 
 
-def generate_input(type = None):
-    if type is None:
-        type = randint(1, 10)
-    if type == 1:
-        return [randint(-20, 20) for i in range(20)]
-    elif type == 2:
-        return []
-    elif type == 3:
-        return [randint(0,20) for i in range(10)]
-    elif type == 4:
-        return [randint(-20, 20) for i in range(500)]
-    elif type == 5:
-        return [randint(-100, 100) for i in range(100)]
-    elif type == 6:
-        return [randint(-2, 2) for i in range(2)]
-    elif type == 7:
-        return [randint(-1000, 1000) for i in range(20)]
-    elif type == 8:
-        return [randint(-50, 50) for i in range(1_000)]
-    elif type == 9:
-        return ""
-    elif type == 10:
-        return [randint(-1000, 1000) for i in range(1_000)]
-
-
 def main():
-    # print(suboptimal(generate_input()))
-    # for i in range(1_000):
-    #     print(optimal(generate_input()))
-    print(optimal(sorted(generate_input(1))))
+    array = [1, 2, 3, 5, 6, 8, 9]
+    return optimal(array)
 
 
 if __name__ == "__main__":
