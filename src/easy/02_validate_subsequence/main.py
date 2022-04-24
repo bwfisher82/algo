@@ -13,31 +13,7 @@ def is_valid_subsequence(array, sequence):
 def main():
     array = [5, 1, 22, 25, 6, -1, 8, 10]
     sequence = [1, 6, -1, 10]
-    print(is_valid_subsequence(array, sequence))
-    # array = [5, 1, 22, 25, 6, -1, 8, 10]
-    # sequence = [1, 6, -1, 1]
-    # print(is_valid_subsequence(array, sequence))
-    # array = [5, 1, 22, 25, 6, -1, 8, 10]
-    # sequence = [1, 6, -1, 44]
-    # print(is_valid_subsequence(array, sequence))
-    # array = [5, 1, 22, 25, 6, -1, 8, 10]
-    # sequence = [1, 6, -1, 10, 15, 38, 29, 38, 5, 8, 1]
-    # print(is_valid_subsequence(array, sequence))
-    # array = [5, 1, 22, 25, 6, -1, 8, 10]
-    # sequence = []
-    # print(is_valid_subsequence(array, sequence))
-    # array = [5, 1, 22, 25, 6, -1, 8, 10]
-    # sequence = [1]
-    # print(is_valid_subsequence(array, sequence))
-    # array = []
-    # sequence = [1]
-    # print(is_valid_subsequence(array, sequence))
-    # array = []
-    # sequence = []
-    # print(is_valid_subsequence(array, sequence))
-    # array = [5, 1, 22, 25, 6, -1, 8, 10]
-    # sequence = [5, 1, 22, 25, 6, -1, 8, 10]
-    # print(is_valid_subsequence(array, sequence))
+    return is_valid_subsequence(array, sequence)
 
 
 if __name__ == "__main__":
