@@ -1,7 +1,6 @@
 import pytest
 
-algo = __import__("algo.easy.01_two_number_sum")
-import algo.main
+from algo.easy.algo01_two_number_sum.main import optimal, median, suboptimal, worst_case
 
 
 class TestTwoNumberSum:
